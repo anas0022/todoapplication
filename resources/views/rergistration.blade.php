@@ -9,8 +9,11 @@
   <link rel="stylesheet" href="{{asset('CSS/register.css')}}">
 </head>
 <body>
+<div class="mode">
+        <i class="fa-solid fa-sun" id="sun"></i>
+<i class="fa-solid fa-moon" id="moon"></i></div>
   <section>
-    @include('mode')
+  
    
 
     <form action="{{route('register.post')}}" method="post" class="sing">

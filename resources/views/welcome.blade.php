@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="{{asset('CSS/welcome.css')}}">
 </head>
 <body class="b">
+<div class="mode">
+        <i class="fa-solid fa-sun" id="sun"></i>
+<i class="fa-solid fa-moon" id="moon"></i></div>
     <section>
-      @include('mode')
+      
     <div class="box">
         <div class="image">
             <img src="favicon.ico" alt="" srcset="" >

@@ -6,9 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<div class="mode">
-        <i class="fa-solid fa-sun" id="sun"></i>
-<i class="fa-solid fa-moon" id="moon"></i></div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var body = document.body; // Select the body element directly

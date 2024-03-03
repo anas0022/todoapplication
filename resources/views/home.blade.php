@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="{{asset('CSS/home.css')}}">
 </head>
 <body>
-    <section>
-        <div class="heder">
-            <div class="menu">
+
+<div class="heder">
+<div class="menu">
             <span class="glyphicon glyphicon-th" id="toggle"></span>
-     
-<div class="side-menu">
+            <div class="side-menu">
 <div class="close">
 <i class="fa fa-close" id="close"></i>
 </div>
@@ -40,7 +39,7 @@
 </div>
 
 <div class="task-bar" > 
-         <div class="span-taskbar">
+         <div class="span-taskbar" >
          @foreach ($todos as $todo)
          <div class="task-items">
     <input type="checkbox" class="check" onclick="checkfunction(this)" data-id="{{ $todo->id }}" style="width:3vh; height:3vh;">
@@ -58,13 +57,13 @@
         </div> 
 </div>
 
-            </div>
-            <div class="include">
-            @include('mode')
-            </div>
         </div>
-        
-        <div class="box">
+        <div class="mode">
+        <i class="fa-solid fa-sun" id="sun"></i>
+<i class="fa-solid fa-moon" id="moon"></i></div>
+</div>
+<div class="section">
+<div class="box">
         
            
         <form action="{{ route('home.post') }}" method="post" style="width:100%; height:100%;">
@@ -84,12 +83,15 @@
                </div></div></form>
             </div>
         </div>
-        <div class="task" >
+
+</div>
+<div class="task" >
+
 <div class="task-head">
-    <p id="task">Tasks</p>
+<p id="task" >Tasks</p>
 </div>
 @if (!$todos->isEmpty())
-    <ul>
+<ul >
         @foreach ($todos as $todo)
             <div class="ite">
            
@@ -100,13 +102,11 @@
                 <p id="task-date"  >{{ $todo->date }} </p>
                 <span id="appears_{{ $todo->id }}" class="appear" >
      
-    <div class="img" style=" ">
-        <img src="imoji.png" alt="" srcset="">
+    <div class="img" style=" height:100%; ">
+        <img src="imo.png" alt="" srcset="" >
     </div>
-    <div class="done-text">
-        <p>Well Done</p>
-    </div>
-    
+  
+
     
     </span><div class="else" style="position:relative;" > <p id="real" class="real">{{ $todo->todo_list }} </p>
             
@@ -126,22 +126,12 @@
         @endforeach
        
     </ul>
-    
-   
-</div>
-@else
+    @else
  @include('endif')
 @endif 
-</div>
-</div>
 
-        
-    </div>
 </div>
-</div>
-
-
-    <script>
+<script>
        document.addEventListener('DOMContentLoaded', function() {
     var body = document.body; 
     var sun = document.getElementById('sun');

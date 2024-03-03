@@ -5,105 +5,127 @@
    }
    body{
     background-color: white;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    
     transition: all 0.2s ease-in-out;
   }
+
   body,html{
     width:100%;
     height:100%;
     overflow-x: hidden;
   }
-  section{
+  .section{
   
     width:100%;
-    height:95vh;
-  
+    height:85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+
+ 
   
   }
   .heder{
     width: 100%;
-    height: 5%;
+    height: 15%;
+
+   
   }
-  .include{
+ 
+  .mode{
+    width: 50%;
+   
     height: 100%;
-    width: 10%;
     float: right;
     display: flex;
-    justify-content: center;
-    align-items: start;
-  
+    justify-content: end;
+    align-items: center;
   }
+  
   #sun {
-    font-size: 5vh;
-  
-    transition: all 0.2s ease-in-out;
-  
+    font-size:2vw;
     background-image: linear-gradient(45deg, yellow, orange);
-  
-  
     background-size: 100%;
     background-repeat: repeat;
-    
-   
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    
-  
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
   }
   
-  
-  #moon{
-    transition: all 0.2s ease-in-out;
-    font-size: 5vh;
+  #moon {
+    font-size: 2vw;
     background-image: linear-gradient(45deg, white, rgb(0, 195, 255));
-  
-  display: none;
+    display: none;
     background-size: 100%;
     background-repeat: repeat;
-    
-   
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    
-  
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
   }
   .menu {
     width: 40%;
     height: 100%;
     float: left;
+    
   }
+  
   .side-menu{
     width: 30vh;
     height: 65vh;
-    
-    z-index: 600;
+    position: relative;
+
+    z-index: 900;
     background-color: white;
     border-radius:2vh ;
     box-shadow: rgba(1, 2, 2, 0.377) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     transform: translateX(-50vh);
     transition: all 0.2s ease-in-out;
- margin-top: -4vh;
+ margin-top: -14vh;
   }
   .menu span{
-    font-size: 5vh;
-    width: 30%;
-    height: 30%;
+    font-size: 2vw;
+    width: 10%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 
+
   }
+  .menu2{
+    width: 40%;
+    height: 100%;
+    float: left;
+  }
+  .menu2 form{
+    font-size: 2vw;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+   
+  }
+ #toggl{
+    width: 40%;
+    height: 40%;
+    font-size: 1.5vw;
+    box-shadow: rgba(1, 2, 2, 0.377) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background-color: rgb(31, 28, 28);
+    border-radius:1vh ;
+    color:white;
+  } 
 
   .close{
     width: 100%;
@@ -152,7 +174,9 @@
   }
   .box  {
     width: 100%;
-    height:90%;}
+    height:90%;
+ 
+  }
   
   .inputs{
     width: 100%;
@@ -186,9 +210,13 @@
     align-items: start;
    
   }
+  
   .task-bar{
     height:60vh;
     width: 100%;
+ position: relative;
+ z-index: 200;
+ margin-top: -4vh;
   }
   .span-taskbar label{
    
@@ -227,7 +255,7 @@
       border-bottom-left-radius: 2vh;
       border-bottom-right-radius: 2vh;
       transform: translateX(-50vh);
-  margin-top: -3vh;
+
       transition: all 0.2s ease-in-out;
       background-color: white;
       overflow-y: scroll;
@@ -345,7 +373,7 @@ align-items: center;
    z-index: 100;
   }
   .items span{
-    border: 1px solid rgb(0, 255, 34);
+    border: none;
     width:100%;
      display:none;
       height:105%;
@@ -364,16 +392,7 @@ align-items: center;
   .img img{
     width: 40%;
   }
-  .done-text{
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5vh;
-    font-weight: bolder;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
+ 
   #task-date{
     height:13%;
      width:20%;
@@ -519,3 +538,31 @@ height: 50%;
         } */
         
   } 
+  @media (max-width:1050px){
+    #sun{
+      font-size: 6vw;
+      width: 20%;
+  }
+  #moon{
+      font-size: 6vw;
+      width: 20%;
+  }
+  .menu span{
+    font-size: 6vw;
+
+    width: 20%;
+  }
+  #date{
+    width: 100%;
+  }
+  .side-menu{
+    margin-top: -12vh;
+  }
+  #toggl{
+    width: 100%;
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  }
